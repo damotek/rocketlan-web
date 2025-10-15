@@ -6,16 +6,10 @@ html, body {
   color: #fff;
 }
 
-/* 🔥 Background: CS2 vibe */
-body {
-  background: url('https://images.unsplash.com/photo-1618841018451-5d49e4b162ec?auto=format&fit=crop&w=1920&q=80')
-    no-repeat center center fixed;
-  background-size: cover;
-}
+
 
 /* Dim overlay to improve readability */
 .overlay {
-  background: rgba(0, 0, 0, 0.75);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -81,8 +75,67 @@ body {
   color: white;
   border: none;
   border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  cursor: pointer;/* Fullscreen video background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover; /* scale and crop nicely */
+  background: #000; /* fallback color */
+  opacity: 0.65; /* optional: dim for readability */
+}
+
+/* overlay content stays above video */
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+/* Fullscreen video background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover; /* scale and crop nicely */
+  background: #000; /* fallback color */
+  opacity: 0.65; /* optional: dim for readability */
+}
+
+/* overlay content stays above video */
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+/* Fullscreen video background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover; /* scale and crop nicely */
+  background: #000; /* fallback color */
+  opacity: 0.65; /* optional: dim for readability */
+}
+
+/* overlay content stays above video */
+.overlay {
+  position: relative;
+  z-index: 1;
+}
+ transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(255, 115, 0, 0.3);
 }
 
@@ -103,4 +156,23 @@ body {
     width: 100%;
     text-align: center;
   }
+}/* Fullscreen video background */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  object-fit: cover; /* scale and crop nicely */
+  background: #000; /* fallback color */
+  opacity: 0.90; /* optional: dim for readability */
+}
+
+/* overlay content stays above video */
+.overlay {
+  position: relative;
+  z-index: 1;
 }
